@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 238px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.sidebar button:hover {
+    background-color: #555;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.section {
+    display: none; /* Esconde as seções inicialmente */
+}
+
+.section.hidden {
+    display: none;
+}
+
+.section:not(.hidden) {
+    display: block; /* Mostra a seção ativa */
+}
+
+form {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+.vaga, .veiculo {
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.vaga button, .veiculo button {
+    margin-left: 10px;
+    background-color: #dc3545; /* Vermelho para o botão de remover */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.vaga button:hover, .veiculo button:hover {
+    background-color: #c82333; /* Vermelho escuro ao passar o mouse */
+}
+
+.vaga.disponivel {
+    background-color: #28a745; /* Verde para vagas disponíveis */
+    color: white;
+}
+
+.vaga.ocupada {
+    background-color: #dc3545; /* Vermelho para vagas ocupadas */
+    color: white;
+}

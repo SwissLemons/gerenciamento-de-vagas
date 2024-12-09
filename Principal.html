@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Estacionamento</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Menu</h2>
+            <button id="btnLogin">Login</button>
+            <button id="btnLogin">Cadastrar-se</button>
+            <br>
+            <h2>Gerenciamento</h2>
+            <button id="btnVeiculos">Cadastro de Veículos</button>
+            <button id="btnVagas">Cadastro de Vagas</button>
+            <button id="btnConsulta">Consulta de Vagas</button>
+        </aside>
+        <main class="content">
+            <div id="login" class="section">
+                <h1>Login</h1>
+                <form id="formLogin">
+
+
+                </form>
+            </div>
+
+            <div id="cadastroVeiculos" class="section hidden">
+                <h1>Cadastro de Veículos</h1>
+                <form id="formVeiculo">
+                    <label for="placaVeiculo">Placa do veículo</label>
+                    <input type="text" id="placaVeiculo" placeholder="Placa do veículo" required>
+
+                    <label for="nomeProprietario">Nome do proprietário</label>
+                    <input type="text" id="nomeProprietario" placeholder="Nome do proprietário" required>
+
+                    <label for="modeloVeiculo">Modelo do veículo</label>
+                    <input type="text" id="modeloVeiculo" placeholder="Modelo do veículo" required>
+
+                    <label for="corVeiculo">Cor do veículo</label>
+                    <input type="text" id="corVeiculo" placeholder="Cor do veículo" required>
+
+                    <button type="submit">Salvar Veículo</button>
+                </form>
+                <div id="listaVeiculos"></div>
+            </div>
+
+            <div id="cadastroVagas" class="section hidden">
+                <h1>Cadastro de Vagas</h1>
+                <form id="formVaga">
+                    <label for="placaVaga">Placa do veículo</label>
+                    <select id="placaVaga" required></select>    
+
+                    <label for="blocoApto">Bloco do apartamento</label>
+                    <select id="blocoApto" required></select>
+
+                    <label for="numeroApto">Número do apartamento</label>
+                    <select id="numeroApto" required></select>
+
+                    <label for="numeroVaga">Número da vaga</label>
+                    <select id="numeroVaga" required></select>
+
+                    <p> </p>
+                    <button type="submit">Salvar Vaga</button>
+                </form>
+                <div id="listaVagas"></div> <!-- Exibir as vagas cadastradas -->
+            </div>
+
+            <div id="consultaVagas" class="section hidden">
+                <h1>Consulta de Vagas Disponíveis</h1>
+                <div id="vagasDisponiveis"></div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
